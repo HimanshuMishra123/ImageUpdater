@@ -121,7 +121,7 @@ data:
     - registry: <account-id>.dkr.ecr.<region>.amazonaws.com
       username: AWS
       passwordFrom:
-        env: AWS_ACCESS_TOKEN
+        serviceAccount: argo-image-updater-sa
   bitbucket:
     username: <bitbucket-username>
     passwordSecret:
