@@ -53,13 +53,13 @@ Here's a step-by-step guide to deploy the Argo Image Updater as an operator in y
    helm repo add argo https://argoproj.github.io/argo-helm
    helm repo update
    ```
-
 2. Install the Argo Image Updater:
    ```bash
-   helm install argo-image-updater argo/argo-image-updater \
-     --namespace argo-image-updater \
-     --create-namespace \
+   helm install argo-image-updater argo/argocd-image-updater \
+     --namespace argocd \
      --set serviceAccount.name=argo-image-updater-sa
+     --set clusterName=<your-cluster-name> \
+     --set serviceAccount.create=false \
    ```
 
 #### **Step 3: Configure Bitbucket Access**
